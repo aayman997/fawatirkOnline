@@ -1,91 +1,192 @@
 // vars
-$bbg : #e9e9e9;
-$bg  : #ff9291;
-$sbg : #c491ff;
-$tx  : #3d3d3d;
-$sh  : #f9f9f9;
-$bgr : transparent linear-gradient(61deg, $sbg 0%, $bg 100%) 0% 0% no-repeat padding-box;
+$main  : #ecf0f1;
+$sec   : #2980b9;
+$black : #2d3436;
 // End Vars
 
 // Start Global Styling
+html, body {
+  scroll-behavior : smooth;
+  }
+
 body {
-	direction      : rtl;
-	text-align     : right;
-	background     : $bbg;
-	min-height     : 100vh;
-	position       : relative;
-	//height     : 500vh;
-	padding-bottom : 150px;
-}
+  direction  : rtl;
+  text-align : right;
+  background : $main;
+  min-height : 100vh;
+  position   : relative;
+  //height     : 500vh;
+  padding    : 110px 0;
+  height     : 5000px;
+  }
+
 
 *:not(i) {
-	font-family   : 'Almarai', sans-serif;
-	overflow-wrap : break-word;
-	outline       : none !important;
-}
+  font-family   : 'Tajawal', sans-serif;
+  overflow-wrap : break-word;
+  outline       : none !important;
+  }
 
 a, i, span, img {
-	display : inline-block;
-}
+  display : inline-block;
+  }
 
 .container {
-	@media screen {
-		max-width : 96vw;
-	}
-}
+  @media screen {
+    max-width : 96vw;
+    }
+  }
 
 // End Global Styling
 
 //Start Static Elements
 .navbar {
-	background : $bgr;
-	color      : $sh;
-	//box-shadow : 0 0 3px rgba(30, 39, 46, 0.40);
-	height     : 70px;
+  background : $main;
+  color      : $sec;
+  //box-shadow : 0 0 3px rgba(30, 39, 46, 0.40);
+  height     : 70px;
 
-	a {
-		color : $sh;
+  a {
+    color : $sec;
 
-		&.navbar-brand {
-			font-weight  : 700;
-			font-size    : 20px;
-			margin-right : 0;
-		}
-	}
+    &.navbar-brand {
+      font-weight  : 700;
+      font-size    : 20px;
+      margin-right : 0;
+      }
+    }
 
-	.navbar-nav {
-		padding-right : 0;
-	}
-
-	.release {
-		a {
-			padding          : 10px 15px;
-			background-color : $sh;
-			color            : $bg;
-			border-radius    : 30px;
-		}
-	}
-}
+  .navbar-nav {
+    padding-right : 0;
+    }
+  }
 
 footer {
-	background : $bgr;
-	color      : $bbg;
-	padding    : 20px 0;
-	position   : absolute;
-	top        : auto;
-	right      : 0;
-	bottom     : 0;
-	left       : 0;
+  background : $main;
+  color      : $main;
+  padding    : 20px 0;
+  position   : absolute;
+  top        : auto;
+  right      : 0;
+  bottom     : 0;
+  left       : 0;
 
+  .copyrights {
+    float : left;
+    }
+  }
 
-	.release {
-		padding          : 10px 15px;
-		background-color : $sh;
-		color            : $bg;
-		border-radius    : 30px;
-	}
+// Start Header
+.header {
+  margin-top : -40px;
+  height     : calc(100vh - 70px);
+  background : url('../images/HomePage/header.png') center bottom no-repeat;
+  position   : relative;
+  text-align : center;
 
-	.copyrights {
-		float : left;
-	}
-}
+  .text {
+    text-align : center;
+    color      : $main;
+    margin-top : 5vh;
+
+    h1 {
+      font-weight   : Bold;
+      margin-bottom : 40px;
+      font-size     : 60px;
+      }
+
+    p {
+      font-size     : 22px;
+      margin-bottom : 40px;
+      }
+
+    .btn-con {
+      button {
+        background    : $sec;
+        box-shadow    : 0 0 18px #00000080;
+        color         : $main;
+        border-radius : 6px;
+        border        : none;
+        padding       : 15px 20px;
+        font-size     : 22px;
+        font-weight   : bold;
+        margin-bottom : 60px;
+        }
+      }
+    }
+
+  .down-btn {
+    position : absolute;
+    left     : auto;
+    right    : auto;
+    top      : auto;
+    bottom   : 10px;
+    display  : inline-block;
+
+    a {
+      color           : $black;
+      text-decoration : none;
+
+      p {
+        font-size     : 24px;
+        font-weight   : bold;
+        margin-bottom : 20px;
+        }
+
+      i {
+        font-size : 40px;
+        color     : $sec;
+        animation : upDown 0.8s ease-in-out infinite;
+        }
+      }
+    }
+  }
+
+.statics {
+  .static {
+    .static-box {
+      background    : linear-gradient(0deg, $sec 0%, $main 60%);
+      //display       : inline-block;
+      border-radius : 50%;
+      width         : 200px;
+      height        : 200px;
+      text-align    : center;
+      line-height   : 200px;
+      box-shadow    : 6px -6px 18px rgba(0, 0, 0, 0.3);
+
+      .static-text {
+        display        : inline-block;
+        vertical-align : middle;
+        width          : 100%;
+        line-height    : 1;
+
+        p {
+          margin-bottom : 0;
+
+          &:first-of-type {
+            margin-bottom : 40px;
+            color         : $sec;
+            }
+
+          &:last-of-type {
+            font-size   : 18px;
+            font-weight : bold;
+            color       : $main;
+            }
+          }
+        }
+      }
+    }
+  }
+
+@keyframes upDown {
+  0% {
+    transform : translateY(0px);
+    }
+  50% {
+    transform : translateY(-20px);
+    }
+  100% {
+    transform : translateY(0px);
+    }
+  }
