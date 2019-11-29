@@ -1,0 +1,91 @@
+// vars
+$bbg : #e9e9e9;
+$bg  : #ff9291;
+$sbg : #c491ff;
+$tx  : #3d3d3d;
+$sh  : #f9f9f9;
+$bgr : transparent linear-gradient(61deg, $sbg 0%, $bg 100%) 0% 0% no-repeat padding-box;
+// End Vars
+
+// Start Global Styling
+body {
+	direction      : rtl;
+	text-align     : right;
+	background     : $bbg;
+	min-height     : 100vh;
+	position       : relative;
+	//height     : 500vh;
+	padding-bottom : 150px;
+}
+
+*:not(i) {
+	font-family   : 'Almarai', sans-serif;
+	overflow-wrap : break-word;
+	outline       : none !important;
+}
+
+a, i, span, img {
+	display : inline-block;
+}
+
+.container {
+	@media screen {
+		max-width : 96vw;
+	}
+}
+
+// End Global Styling
+
+//Start Static Elements
+.navbar {
+	background : $bgr;
+	color      : $sh;
+	//box-shadow : 0 0 3px rgba(30, 39, 46, 0.40);
+	height     : 70px;
+
+	a {
+		color : $sh;
+
+		&.navbar-brand {
+			font-weight  : 700;
+			font-size    : 20px;
+			margin-right : 0;
+		}
+	}
+
+	.navbar-nav {
+		padding-right : 0;
+	}
+
+	.release {
+		a {
+			padding          : 10px 15px;
+			background-color : $sh;
+			color            : $bg;
+			border-radius    : 30px;
+		}
+	}
+}
+
+footer {
+	background : $bgr;
+	color      : $bbg;
+	padding    : 20px 0;
+	position   : absolute;
+	top        : auto;
+	right      : 0;
+	bottom     : 0;
+	left       : 0;
+
+
+	.release {
+		padding          : 10px 15px;
+		background-color : $sh;
+		color            : $bg;
+		border-radius    : 30px;
+	}
+
+	.copyrights {
+		float : left;
+	}
+}
