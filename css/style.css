@@ -9,13 +9,16 @@ body {
   min-height: 100vh;
   position: relative;
   padding: 110px 0;
-  height: 5000px;
 }
 
 *:not(i) {
   font-family: "Tajawal", sans-serif;
   overflow-wrap: break-word;
   outline: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
 }
 
 a, i, span, img {
@@ -31,7 +34,8 @@ a, i, span, img {
 .navbar {
   background: #ecf0f1;
   color: #2980b9;
-  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  min-height: 70px;
 }
 .navbar a {
   color: #2980b9;
@@ -47,16 +51,33 @@ a, i, span, img {
 
 footer {
   background: #ecf0f1;
-  color: #ecf0f1;
+  color: #2980b9;
   padding: 20px 0;
   position: absolute;
   top: auto;
   right: 0;
   bottom: 0;
   left: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
 }
-footer .copyrights {
-  float: left;
+
+.subscription .text button, .header .text .btn-con button {
+  background: #e74c3c;
+  box-shadow: 0 0 9px #00000080;
+  color: #ecf0f1;
+  border-radius: 6px;
+  border: none;
+  padding: 15px 20px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  transition: 0.2s ease-in-out box-shadow;
+}
+.subscription .text button:hover, .header .text .btn-con button:hover {
+  box-shadow: 9px 9px 18px #00000080;
 }
 
 .header {
@@ -66,37 +87,40 @@ footer .copyrights {
   position: relative;
   text-align: center;
 }
+@media screen and (max-width: 575px) {
+  .header {
+    background: transparent linear-gradient(180deg, #2980b9 0%, #98c0d9d4 60%, #ecf0f1b3 100%) 0 0 no-repeat padding-box;
+  }
+}
 .header .text {
   text-align: center;
   color: #ecf0f1;
   margin-top: 5vh;
 }
 .header .text h1 {
-  font-weight: Bold;
   margin-bottom: 40px;
   font-size: 60px;
+}
+@media screen and (max-width: 991px) {
+  .header .text h1 {
+    font-size: 22px;
+  }
 }
 .header .text p {
   font-size: 22px;
   margin-bottom: 40px;
 }
-.header .text .btn-con button {
-  background: #2980b9;
-  box-shadow: 0 0 18px #00000080;
-  color: #ecf0f1;
-  border-radius: 6px;
-  border: none;
-  padding: 15px 20px;
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 60px;
+@media screen and (max-width: 991px) {
+  .header .text p {
+    font-size: 18px;
+  }
 }
 .header .down-btn {
   position: absolute;
-  left: auto;
-  right: auto;
+  left: 0;
+  right: 0;
   top: auto;
-  bottom: 10px;
+  bottom: 0;
   display: inline-block;
 }
 .header .down-btn a {
@@ -114,32 +138,116 @@ footer .copyrights {
   animation: upDown 0.8s ease-in-out infinite;
 }
 
+.statics {
+  text-align: center;
+  padding: 90px 0;
+}
+.statics h2 {
+  color: #2980b9;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+.statics .container > p {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
 .statics .static .static-box {
-  background: linear-gradient(0deg, #2980b9 0%, #ecf0f1 60%);
+  background: #fff;
+  overflow: hidden;
   border-radius: 50%;
   width: 200px;
   height: 200px;
+  margin: auto;
   text-align: center;
-  line-height: 200px;
   box-shadow: 6px -6px 18px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
-.statics .static .static-box .static-text {
-  display: inline-block;
-  vertical-align: middle;
-  width: 100%;
-  line-height: 1;
-}
-.statics .static .static-box .static-text p {
-  margin-bottom: 0;
-}
-.statics .static .static-box .static-text p:first-of-type {
-  margin-bottom: 40px;
+.statics .static .static-box > p {
+  margin: 10px 0 0 0;
   color: #2980b9;
 }
-.statics .static .static-box .static-text p:last-of-type {
+.statics .static .static-box .wave {
+  background: #2980b9;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.statics .static .static-box .wave.first {
+  height: 85%;
+}
+.statics .static .static-box .wave.second {
+  height: 75%;
+}
+.statics .static .static-box .wave.third {
+  height: 65%;
+}
+.statics .static .static-box .wave.fourth {
+  height: 55%;
+}
+.statics .static .static-box .wave > p {
   font-size: 18px;
   font-weight: bold;
   color: #ecf0f1;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+.statics .static .static-box:nth-of-type(2) {
+  background: #000;
+}
+
+.how-to-work {
+  text-align: center;
+}
+.how-to-work h2 {
+  color: #2980b9;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+.how-to-work > p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.how-to-work .step-box .img-con {
+  margin-bottom: 25px;
+}
+.how-to-work .step-box .img-con img {
+  border-radius: 50%;
+  box-shadow: -9px 9px 9px #00000029;
+}
+.how-to-work .step-box h3 {
+  font-size: 26px;
+  color: #2980b9;
+  margin-bottom: 15px;
+}
+
+.subscription {
+  background: url("../images/HomePage/13784-NPPXD3.png") center no-repeat;
+  background-size: cover;
+  padding: 130px 0;
+  position: relative;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+.subscription .card-img-overlay {
+  backdrop-filter: brightness(0.5);
+  padding: 0;
+}
+.subscription .text {
+  position: relative;
+  z-index: 9;
+}
+.subscription .text h2 {
+  color: #ecf0f1;
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+.subscription .text button {
+  padding: 15px 60px;
 }
 
 @keyframes upDown {

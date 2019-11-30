@@ -17,7 +17,7 @@ body {
   position   : relative;
   //height     : 500vh;
   padding    : 110px 0;
-  height     : 5000px;
+  //height     : 5000px;
   }
 
 
@@ -25,6 +25,10 @@ body {
   font-family   : 'Tajawal', sans-serif;
   overflow-wrap : break-word;
   outline       : none !important;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight : bold;
   }
 
 a, i, span, img {
@@ -43,8 +47,8 @@ a, i, span, img {
 .navbar {
   background : $main;
   color      : $sec;
-  //box-shadow : 0 0 3px rgba(30, 39, 46, 0.40);
-  height     : 70px;
+  box-shadow : 0 0 20px rgba(0, 0, 0, 0.5);
+  min-height : 70px;
 
   a {
     color : $sec;
@@ -62,17 +66,36 @@ a, i, span, img {
   }
 
 footer {
-  background : $main;
-  color      : $main;
-  padding    : 20px 0;
-  position   : absolute;
-  top        : auto;
-  right      : 0;
-  bottom     : 0;
-  left       : 0;
+  background  : $main;
+  color       : $sec;
+  padding     : 20px 0;
+  position    : absolute;
+  top         : auto;
+  right       : 0;
+  bottom      : 0;
+  left        : 0;
+  box-shadow  : 0 0 20px rgba(0, 0, 0, 0.5);
+  font-size   : 18px;
+  font-weight : bold;
+  text-align  : left;
+  }
 
-  .copyrights {
-    float : left;
+// Static Styles
+%btn-style {
+  background    : #e74c3c;
+  box-shadow    : 0 0 9px #00000080;
+  color         : $main;
+  border-radius : 6px;
+  border        : none;
+  padding       : 15px 20px;
+  font-size     : 22px;
+  font-weight   : bold;
+  margin-bottom : 60px;
+  transition    : 0.2s ease-in-out box-shadow;
+
+  &:hover {
+    box-shadow : 9px 9px 18px #00000080;
+
     }
   }
 
@@ -83,6 +106,10 @@ footer {
   background : url('../images/HomePage/header.png') center bottom no-repeat;
   position   : relative;
   text-align : center;
+  @media screen and (max-width : 575px) {
+    background : transparent linear-gradient(180deg, #2980b9 0%, #98c0d9d4 60%, #ecf0f1b3 100%) 0 0 no-repeat padding-box;
+
+    }
 
   .text {
     text-align : center;
@@ -90,37 +117,34 @@ footer {
     margin-top : 5vh;
 
     h1 {
-      font-weight   : Bold;
       margin-bottom : 40px;
       font-size     : 60px;
+      @media screen and (max-width : 991px) {
+        font-size : 22px;
+        }
       }
 
     p {
       font-size     : 22px;
       margin-bottom : 40px;
+      @media screen and (max-width : 991px) {
+        font-size : 18px;
+        }
       }
 
     .btn-con {
       button {
-        background    : $sec;
-        box-shadow    : 0 0 18px #00000080;
-        color         : $main;
-        border-radius : 6px;
-        border        : none;
-        padding       : 15px 20px;
-        font-size     : 22px;
-        font-weight   : bold;
-        margin-bottom : 60px;
+        @extend %btn-style;
         }
       }
     }
 
   .down-btn {
     position : absolute;
-    left     : auto;
-    right    : auto;
+    left     : 0;
+    right    : 0;
     top      : auto;
-    bottom   : 10px;
+    bottom   : 0;
     display  : inline-block;
 
     a {
@@ -140,41 +164,145 @@ footer {
         }
       }
     }
+
   }
 
 .statics {
+  text-align : center;
+  padding    : 90px 0;
+
+  h2 {
+    color         : $sec;
+    margin-bottom : 25px;
+    font-size     : 26px;
+    }
+
+  .container > p {
+    margin-bottom : 40px;
+    font-size     : 20px;
+    }
+
   .static {
     .static-box {
-      background    : linear-gradient(0deg, $sec 0%, $main 60%);
+      background    : #fff;
+      overflow      : hidden;
+      //background    : linear-gradient(0deg, $sec 0%, $main 60%);
       //display       : inline-block;
       border-radius : 50%;
       width         : 200px;
       height        : 200px;
+      margin        : auto;
       text-align    : center;
-      line-height   : 200px;
+      //line-height   : 200px;
       box-shadow    : 6px -6px 18px rgba(0, 0, 0, 0.3);
+      position      : relative;
 
-      .static-text {
-        display        : inline-block;
-        vertical-align : middle;
-        width          : 100%;
-        line-height    : 1;
+      > p {
+        margin : 10px 0 0 0;
+        color  : $sec;
+        }
 
-        p {
+      .wave {
+        background              : $sec;
+        border-top-left-radius  : 50%;
+        border-top-right-radius : 50%;
+        position                : absolute;
+        top                     : auto;
+        right                   : 0;
+        bottom                  : 0;
+        left                    : 0;
+
+        &.first {
+          height : 85%;
+          }
+
+        &.second {
+          height : 75%;
+          }
+
+        &.third {
+          height : 65%;
+          }
+
+        &.fourth {
+          height : 55%;
+          }
+
+        > p {
+          font-size     : 18px;
+          font-weight   : bold;
+          color         : $main;
+          margin-top    : 40px;
           margin-bottom : 0;
-
-          &:first-of-type {
-            margin-bottom : 40px;
-            color         : $sec;
-            }
-
-          &:last-of-type {
-            font-size   : 18px;
-            font-weight : bold;
-            color       : $main;
-            }
           }
         }
+
+      &:nth-of-type(2) {
+        background : #000;
+        }
+      }
+    }
+  }
+
+.how-to-work {
+  text-align : center;
+
+  h2 {
+    color         : $sec;
+    margin-bottom : 25px;
+    font-size     : 26px;
+    }
+
+  > p {
+    font-size     : 20px;
+    margin-bottom : 40px;
+    }
+
+  .step-box {
+    .img-con {
+      margin-bottom : 25px;
+
+      img {
+        border-radius : 50%;
+        box-shadow    : -9px 9px 9px #00000029;
+        }
+      }
+
+    h3 {
+      font-size     : 26px;
+      color         : $sec;
+      margin-bottom : 15px;
+      }
+    }
+  }
+
+.subscription {
+  background      : url('../images/HomePage/13784-NPPXD3.png') center no-repeat;
+  background-size : cover;
+  padding         : 130px 0;
+  position        : relative;
+  text-align      : center;
+  margin-top      : 60px;
+  margin-bottom   : 80px;
+
+  .card-img-overlay {
+    backdrop-filter : brightness(0.5);
+    padding         : 0;
+    }
+
+  .text {
+    position : relative;
+    z-index  : 9;
+
+    h2 {
+      color         : $main;
+      font-size     : 26px;
+      margin-bottom : 40px;
+      }
+
+    button {
+      @extend %btn-style;
+      padding : 15px 60px;
       }
     }
   }
