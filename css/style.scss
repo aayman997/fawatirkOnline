@@ -7,7 +7,7 @@ $black : #2d3436;
 // Start Global Styling
 html, body {
   scroll-behavior : smooth;
-  }
+}
 
 body {
   direction  : rtl;
@@ -18,28 +18,28 @@ body {
   //height     : 500vh;
   padding    : 110px 0;
   //height     : 5000px;
-  }
+}
 
 
 *:not(i) {
   font-family   : 'Tajawal', sans-serif;
   overflow-wrap : break-word;
   outline       : none !important;
-  }
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-weight : bold;
-  }
+}
 
 a, i, span, img {
   display : inline-block;
-  }
+}
 
 .container {
   @media screen {
     max-width : 96vw;
-    }
   }
+}
 
 // End Global Styling
 
@@ -57,13 +57,13 @@ a, i, span, img {
       font-weight  : 700;
       font-size    : 20px;
       margin-right : 0;
-      }
     }
+  }
 
   .navbar-nav {
     padding-right : 0;
-    }
   }
+}
 
 footer {
   background  : $main;
@@ -78,7 +78,7 @@ footer {
   font-size   : 18px;
   font-weight : bold;
   text-align  : left;
-  }
+}
 
 // Static Styles
 %btn-style {
@@ -96,9 +96,10 @@ footer {
   &:hover {
     box-shadow : 9px 9px 18px #00000080;
 
-    }
   }
+}
 
+// Start Homepage
 // Start Header
 .header {
   margin-top : -40px;
@@ -109,7 +110,7 @@ footer {
   @media screen and (max-width : 575px) {
     background : transparent linear-gradient(180deg, #2980b9 0%, #98c0d9d4 60%, #ecf0f1b3 100%) 0 0 no-repeat padding-box;
 
-    }
+  }
 
   .text {
     text-align : center;
@@ -121,23 +122,23 @@ footer {
       font-size     : 60px;
       @media screen and (max-width : 991px) {
         font-size : 22px;
-        }
       }
+    }
 
     p {
       font-size     : 22px;
       margin-bottom : 40px;
       @media screen and (max-width : 991px) {
         font-size : 18px;
-        }
       }
+    }
 
     .btn-con {
       button {
         @extend %btn-style;
-        }
       }
     }
+  }
 
   .down-btn {
     position : absolute;
@@ -155,17 +156,17 @@ footer {
         font-size     : 24px;
         font-weight   : bold;
         margin-bottom : 20px;
-        }
+      }
 
       i {
         font-size : 40px;
         color     : $sec;
         animation : upDown 0.8s ease-in-out infinite;
-        }
       }
     }
-
   }
+
+}
 
 .statics {
   text-align : center;
@@ -175,12 +176,12 @@ footer {
     color         : $sec;
     margin-bottom : 25px;
     font-size     : 26px;
-    }
+  }
 
   .container > p {
     margin-bottom : 40px;
     font-size     : 20px;
-    }
+  }
 
   .static {
     .static-box {
@@ -200,7 +201,7 @@ footer {
       > p {
         margin : 10px 0 0 0;
         color  : $sec;
-        }
+      }
 
       .wave {
         background              : $sec;
@@ -214,19 +215,19 @@ footer {
 
         &.first {
           height : 85%;
-          }
+        }
 
         &.second {
           height : 75%;
-          }
+        }
 
         &.third {
           height : 65%;
-          }
+        }
 
         &.fourth {
           height : 55%;
-          }
+        }
 
         > p {
           font-size     : 18px;
@@ -234,15 +235,15 @@ footer {
           color         : $main;
           margin-top    : 40px;
           margin-bottom : 0;
-          }
         }
+      }
 
       &:nth-of-type(2) {
         background : #000;
-        }
       }
     }
   }
+}
 
 .how-to-work {
   text-align : center;
@@ -251,12 +252,12 @@ footer {
     color         : $sec;
     margin-bottom : 25px;
     font-size     : 26px;
-    }
+  }
 
   > p {
     font-size     : 20px;
     margin-bottom : 40px;
-    }
+  }
 
   .step-box {
     .img-con {
@@ -265,16 +266,16 @@ footer {
       img {
         border-radius : 50%;
         box-shadow    : -9px 9px 9px #00000029;
-        }
       }
+    }
 
     h3 {
       font-size     : 26px;
       color         : $sec;
       margin-bottom : 15px;
-      }
     }
   }
+}
 
 .subscription {
   background      : url('../images/HomePage/13784-NPPXD3.png') center no-repeat;
@@ -288,7 +289,7 @@ footer {
   .card-img-overlay {
     backdrop-filter : brightness(0.5);
     padding         : 0;
-    }
+  }
 
   .text {
     position : relative;
@@ -298,23 +299,214 @@ footer {
       color         : $main;
       font-size     : 26px;
       margin-bottom : 40px;
-      }
+    }
 
     button {
       @extend %btn-style;
       padding : 15px 60px;
+    }
+  }
+}
+
+// End Homepage
+
+//Start Bills
+.bills {
+  h1 {
+    font-size     : 26px;
+    color         : $sec;
+    margin-bottom : 40px;
+    text-align    : center;
+  }
+
+  .btn-con {
+    text-align : left;
+
+    button {
+      padding       : 10px 80px;
+      border-radius : 9px;
+      border        : none;
+      background    : $sec;
+      color         : $main;
+      font-size     : 18px;
+      font-weight   : bold;
+    }
+  }
+
+  .table-con {
+    margin-top    : 40px;
+    box-shadow    : 0 0 6px rgba(0, 0, 0, 0.16);
+    border-radius : 9px;
+    overflow      : hidden;
+
+    .table {
+      margin-bottom : 0;
+      border        : none;
+
+      .table-head {
+        background  : $sec;
+        color       : $main;
+        font-size   : 18px;
+        font-weight : bold;
+
+        th {
+          border        : 2px solid rgba(45, 52, 54, 0.2);
+          //border        : 2px solid red;
+
+          border-bottom : none !important;
+          border-top    : none !important;
+
+          &:first-child {
+            border-right : none;
+          }
+
+          &:last-child {
+            border-left : none;
+          }
+        }
+      }
+
+      tbody {
+        color : $black;
+
+        tr {
+          background-color : $main;
+          transition       : 0.2s background-color ease-in-out;
+
+          &:last-child {
+            th, td {
+              border-bottom : none;
+            }
+          }
+
+          th, td {
+            border       : 2px solid rgba(45, 52, 54, 0.2);
+            border-top   : none;
+            border-right : none;
+          }
+
+          td:last-child {
+            border-left : none;
+          }
+
+          &:hover {
+            background : #fff;
+          }
+
+          td {
+            i {
+              font-size : 18px;
+
+              &.fa-eye {
+                color : $sec;
+              }
+
+              &.fa-cloud-download-alt {
+                color : #2ecc71;
+              }
+
+              &.fa-trash {
+                color : #dc3545;
+              }
+            }
+          }
+        }
       }
     }
   }
+}
+
+//End Bills
+
+//Start New Bill
+.new-bill {
+  .new-bill-con {
+    box-shadow    : 0 0 6px rgba(0, 0, 0, 0.16);
+    border-radius : 9px;
+    background    : #fff;
+    padding       : 40px;
+
+    h2 {
+      font-size     : 20px;
+      font-weight   : bold;
+      margin-bottom : 30px;
+      text-align    : center;
+      color         : $sec;
+    }
+
+    form {
+      input {
+        width         : 100%;
+        height        : 45px;
+        border        : none;
+        padding       : 0 15px;
+        background    : $main;
+        border-radius : 6px;
+        color         : $black;
+        margin-bottom : 25px;
+
+        &::placeholder {
+          color : rgba(45, 52, 54, 0.5);
+        }
+      }
+
+      .seller-data, .buyer-data, .bill-data {
+        h4 {
+          margin-bottom : 20px;
+          font-size     : 18px;
+        }
+
+        .add-new {
+          color       : $sec;
+          font-size   : 18px;
+          font-weight : bold;
+          cursor      : pointer;
+          transition  : 0.2s ease-in-out opacity;
+          display     : inline-block;
+          margin      : auto;
+
+          &:hover {
+            opacity : 0.5;
+          }
+
+          i {
+            font-size      : 24px;
+            margin-left    : 10px;
+            vertical-align : middle;
+          }
+        }
+      }
+
+      .btn-con {
+        button {
+          background    : $sec;
+          color         : $main;
+          border        : none;
+          border-radius : 60px;
+          width         : 300px;
+          padding       : 10px 0;
+          font-size     : 18px;
+          font-weight   : bold;
+          margin-top    : 60px;
+          max-width     : 80%;
+        }
+      }
+    }
+  }
+}
+
+.bill-info {
+
+}
 
 @keyframes upDown {
   0% {
     transform : translateY(0px);
-    }
+  }
   50% {
     transform : translateY(-20px);
-    }
+  }
   100% {
     transform : translateY(0px);
-    }
   }
+}
