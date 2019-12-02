@@ -496,7 +496,234 @@ footer {
 }
 
 .bill-info {
+  .bill-info-con {
+    box-shadow    : 0 0 6px rgba(0, 0, 0, 0.16);
+    border-radius : 9px;
+    background    : #fff;
+    overflow      : hidden;
 
+    .bill-head {
+      background  : $sec;
+      padding     : 20px;
+      color       : $main;
+      font-size   : 18px;
+      font-weight : bold;
+    }
+
+    .seller-info {
+      h4 {
+        font-size     : 18px;
+        margin-bottom : 15px;
+      }
+
+      p {
+        margin-bottom : 0;
+
+        &:not(:last-child) {
+          margin-bottom : 10px;
+        }
+      }
+    }
+
+    .table-con {
+      border-bottom : 3px solid rgba(41, 128, 185, 0.5);
+      margin-bottom : 30px;
+
+      .table-head {
+        background : $main;
+        color      : $sec;
+      }
+
+      th, td {
+        padding-left  : 40px;
+        padding-right : 40px;
+      }
+    }
+
+    .bill-total {
+      margin-bottom : 30px;
+
+      .sub-total, .discount, .total {
+        margin-bottom : 20px;
+        color         : $sec;
+        font-size     : 18px;
+        font-weight   : bold;
+
+        &.discount {
+          color : #dc3545;
+        }
+
+        &.total {
+          color         : #2ecc71;
+          margin-bottom : 0;
+        }
+      }
+    }
+
+    .btn-pay {
+      text-align    : center;
+      margin-bottom : 40px;
+
+      button {
+        width         : 260px;
+        max-width     : 90%;
+        height        : 45px;
+        border-radius : 50px;
+        background    : $sec;
+        color         : $main;
+        border        : none;
+        font-size     : 18px;
+        font-weight   : bold;
+      }
+    }
+  }
+}
+
+.contact-us {
+  h1 {
+    font-size     : 26px;
+    text-align    : center;
+    margin-bottom : 30px;
+    color         : $sec;
+  }
+
+  .about {
+    h2 {
+      font-size     : 18px;
+      color         : $sec;
+      margin-bottom : 20px;
+    }
+
+    p {
+      margin-bottom : 30px;
+    }
+
+    .social-links {
+      font-size : 18px;
+      color     : $sec;
+
+      i {
+        font-size      : 24px;
+        margin-right   : 10px;
+        vertical-align : middle;
+
+        &.fa-facebook-square {
+          color : #3b5998;
+        }
+
+        &.fa-twitter-square {
+          color : #1da1f2;
+        }
+
+        &.fa-instagram {
+          color : #fd1d1d;
+        }
+      }
+
+      .social-link {
+        &:not(:last-child) {
+          margin-bottom : 15px;
+        }
+      }
+
+    }
+  }
+
+  .contact-form {
+    background    : #fff;
+    box-shadow    : 0 0 6px rgba(0, 0, 0, 0.16);
+    border-radius : 9px;
+    padding       : 20px;
+
+    input, textarea {
+      width         : 100%;
+      border        : none;
+      padding       : 0 15px;
+      background    : $main;
+      border-radius : 6px;
+      color         : $black;
+      margin-bottom : 25px;
+      resize        : none;
+
+      &::placeholder {
+        color : rgba(45, 52, 54, 0.5);
+      }
+    }
+
+    input {
+      height : 45px;
+    }
+
+    textarea {
+      padding : 15px;
+    }
+
+    .btn-con {
+      text-align : center;
+
+      button {
+        width         : 260px;
+        max-width     : 90%;
+        height        : 45px;
+        border-radius : 50px;
+        background    : $sec;
+        color         : $main;
+        border        : none;
+        font-size     : 18px;
+        font-weight   : bold;
+      }
+    }
+  }
+}
+
+.login, .register {
+  h2 {
+    font-size     : 26px;
+    color         : $sec;
+    margin-bottom : 30px;
+  }
+
+  .login-box {
+    background    : #fff;
+    box-shadow    : 0 0 6px rgba(0, 0, 0, 0.16);
+    text-align    : center;
+    border-radius : 9px;
+    padding       : 40px;
+
+    input {
+      width         : 100%;
+      border        : none;
+      padding       : 0 15px;
+      background    : $main;
+      border-radius : 6px;
+      color         : $black;
+      height        : 45px;
+      margin-bottom : 25px;
+      resize        : none;
+
+      &::placeholder {
+        color : rgba(45, 52, 54, 0.5);
+      }
+    }
+
+    button {
+      width         : 260px;
+      max-width     : 90%;
+      height        : 45px;
+      border-radius : 50px;
+      background    : $sec;
+      color         : $main;
+      border        : none;
+      font-size     : 18px;
+      font-weight   : bold;
+      margin-bottom : 25px;
+    }
+
+    a {
+      font-size   : 18px;
+      font-weight : bold;
+    }
+  }
 }
 
 @keyframes upDown {

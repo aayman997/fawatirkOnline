@@ -389,6 +389,191 @@ footer {
   max-width: 80%;
 }
 
+.bill-info .bill-info-con {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+  border-radius: 9px;
+  background: #fff;
+  overflow: hidden;
+}
+.bill-info .bill-info-con .bill-head {
+  background: #2980b9;
+  padding: 20px;
+  color: #ecf0f1;
+  font-size: 18px;
+  font-weight: bold;
+}
+.bill-info .bill-info-con .seller-info h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.bill-info .bill-info-con .seller-info p {
+  margin-bottom: 0;
+}
+.bill-info .bill-info-con .seller-info p:not(:last-child) {
+  margin-bottom: 10px;
+}
+.bill-info .bill-info-con .table-con {
+  border-bottom: 3px solid rgba(41, 128, 185, 0.5);
+  margin-bottom: 30px;
+}
+.bill-info .bill-info-con .table-con .table-head {
+  background: #ecf0f1;
+  color: #2980b9;
+}
+.bill-info .bill-info-con .table-con th, .bill-info .bill-info-con .table-con td {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.bill-info .bill-info-con .bill-total {
+  margin-bottom: 30px;
+}
+.bill-info .bill-info-con .bill-total .sub-total, .bill-info .bill-info-con .bill-total .discount, .bill-info .bill-info-con .bill-total .total {
+  margin-bottom: 20px;
+  color: #2980b9;
+  font-size: 18px;
+  font-weight: bold;
+}
+.bill-info .bill-info-con .bill-total .sub-total.discount, .bill-info .bill-info-con .bill-total .discount.discount, .bill-info .bill-info-con .bill-total .total.discount {
+  color: #dc3545;
+}
+.bill-info .bill-info-con .bill-total .sub-total.total, .bill-info .bill-info-con .bill-total .discount.total, .bill-info .bill-info-con .bill-total .total.total {
+  color: #2ecc71;
+  margin-bottom: 0;
+}
+.bill-info .bill-info-con .btn-pay {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.bill-info .bill-info-con .btn-pay button {
+  width: 260px;
+  max-width: 90%;
+  height: 45px;
+  border-radius: 50px;
+  background: #2980b9;
+  color: #ecf0f1;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact-us h1 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2980b9;
+}
+.contact-us .about h2 {
+  font-size: 18px;
+  color: #2980b9;
+  margin-bottom: 20px;
+}
+.contact-us .about p {
+  margin-bottom: 30px;
+}
+.contact-us .about .social-links {
+  font-size: 18px;
+  color: #2980b9;
+}
+.contact-us .about .social-links i {
+  font-size: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.contact-us .about .social-links i.fa-facebook-square {
+  color: #3b5998;
+}
+.contact-us .about .social-links i.fa-twitter-square {
+  color: #1da1f2;
+}
+.contact-us .about .social-links i.fa-instagram {
+  color: #fd1d1d;
+}
+.contact-us .about .social-links .social-link:not(:last-child) {
+  margin-bottom: 15px;
+}
+.contact-us .contact-form {
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+  border-radius: 9px;
+  padding: 20px;
+}
+.contact-us .contact-form input, .contact-us .contact-form textarea {
+  width: 100%;
+  border: none;
+  padding: 0 15px;
+  background: #ecf0f1;
+  border-radius: 6px;
+  color: #2d3436;
+  margin-bottom: 25px;
+  resize: none;
+}
+.contact-us .contact-form input::placeholder, .contact-us .contact-form textarea::placeholder {
+  color: rgba(45, 52, 54, 0.5);
+}
+.contact-us .contact-form input {
+  height: 45px;
+}
+.contact-us .contact-form textarea {
+  padding: 15px;
+}
+.contact-us .contact-form .btn-con {
+  text-align: center;
+}
+.contact-us .contact-form .btn-con button {
+  width: 260px;
+  max-width: 90%;
+  height: 45px;
+  border-radius: 50px;
+  background: #2980b9;
+  color: #ecf0f1;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.login h2, .register h2 {
+  font-size: 26px;
+  color: #2980b9;
+  margin-bottom: 30px;
+}
+.login .login-box, .register .login-box {
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+  text-align: center;
+  border-radius: 9px;
+  padding: 40px;
+}
+.login .login-box input, .register .login-box input {
+  width: 100%;
+  border: none;
+  padding: 0 15px;
+  background: #ecf0f1;
+  border-radius: 6px;
+  color: #2d3436;
+  height: 45px;
+  margin-bottom: 25px;
+  resize: none;
+}
+.login .login-box input::placeholder, .register .login-box input::placeholder {
+  color: rgba(45, 52, 54, 0.5);
+}
+.login .login-box button, .register .login-box button {
+  width: 260px;
+  max-width: 90%;
+  height: 45px;
+  border-radius: 50px;
+  background: #2980b9;
+  color: #ecf0f1;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.login .login-box a, .register .login-box a {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 @keyframes upDown {
   0% {
     transform: translateY(0px);
